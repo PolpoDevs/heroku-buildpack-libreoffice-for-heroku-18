@@ -43,7 +43,7 @@ mkdir -p $(dirname $PROFILE_PATH)
 INSTALLED_VERSION=$(ls $INSTALL_DIR/opt)
 
 # Create version-independent symlink to soffice location
-ln -s $RUNTIME_INSTALL_PATH/opt/$INSTALLED_VERSION/program/soffice $RUNTIME_INSTALL_PATH/soffice
+ln -s "${RUNTIME_INSTALL_PATH}/opt/${INSTALLED_VERSION}/program/soffice" "${RUNTIME_INSTALL_PATH}/soffice"
 
 echo "export PATH=$RUNTIME_INSTALL_PATH/opt/$INSTALLED_VERSION/program:\$PATH" >> $PROFILE_PATH
 echo "export OFFICE_PATH=$RUNTIME_INSTALL_PATH/opt/$INSTALLED_VERSION" >> $PROFILE_PATH
